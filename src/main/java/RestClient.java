@@ -81,3 +81,28 @@ public class RestClient {
                 .exchange(URL + "/" + userDTO.getId(), HttpMethod.DELETE, entity, String.class);
     }
 }
+
+
+// HTTP GET http://91.241.64.178:7081/api/users
+// Accept=[application/json, application/*+json]
+// Response 200 OK
+
+// Reading to [java.util.List<UserDTO>]
+// HTTP POST http://91.241.64.178:7081/api/users
+// Accept=[text/plain, application/json, application/*+json, */*]
+// Writing [UserDTO@31c88ec8] as "application/json"
+// Response 200 OK
+
+// Reading to [java.lang.String] as "application/json"
+// HTTP PUT http://91.241.64.178:7081/api/users
+// Accept=[text/plain, application/json, application/*+json, */*]
+// Writing [UserDTO@31c88ec8] as "application/json"
+// Response 200 OK
+
+// Reading to [java.lang.String] as "application/json"
+// HTTP DELETE http://91.241.64.178:7081/api/users/3
+// Accept=[text/plain, application/json, application/*+json, */*]
+// Response 200 OK
+
+// Reading to [java.lang.String] as "application/json"
+// 5ebfebe7cb975dfcf9
