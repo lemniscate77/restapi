@@ -24,7 +24,7 @@ public class RestClient {
 
     //5ebfebe7cb975dfcf9
     public static void main(String[] args) {
-        userDTO = new UserDTO(3L, "James", "Brown", Byte.parseByte("33"));
+        userDTO = new UserDTO(3L, "James", "Brown", Byte.parseByte("33")); //NEW
         cookieID = getCookieID(); //getCookieID
 
         headers.add("Cookie", cookieID);
@@ -32,16 +32,17 @@ public class RestClient {
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
 
         String resultCode =
-                addNewUser(userDTO).getBody().toString() +
-                        updateUser().getBody().toString() +
-                        deleteUser().getBody().toString();
+                addNewUser(userDTO).getBody().toString() + //addNewUser
+                        updateUser().getBody().toString() + //updateUser
+                        deleteUser().getBody().toString(); //deleteUser
 
         System.out.println(resultCode);
     }
 
     //getCookieID
     static String getCookieID() {
-        ResponseEntity<List<UserDTO>> userResponse = restTemplate.exchange(
+        ResponseEntity<List<UserDTO>> userResponse = restTemplate
+                .exchange(
                         URL,
                         HttpMethod.GET,
                         null,
@@ -65,6 +66,7 @@ public class RestClient {
     static ResponseEntity<?> updateUser() {
         userDTO.setName("Thomas");
         userDTO.setLastName("Shelby");
+
         HttpEntity<?> entity = new HttpEntity<>(userDTO, headers);
 
         return restTemplate
