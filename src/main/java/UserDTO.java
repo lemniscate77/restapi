@@ -1,0 +1,56 @@
+import java.io.Serializable;
+
+//DTO Entity
+public class UserDTO implements Serializable {
+    private Long id;
+    private String name;
+    private String lastName;
+    private Byte age;
+
+    public UserDTO() {
+    }
+    public UserDTO(Long id, String name, String lastName, Byte age) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+
+    //id
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
+    //name
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    //lastName
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+
+    //age
+    public Byte getAge() {
+        return age;
+    }
+    public void setAge(Byte age) {
+        this.age = age;
+    }
+
+
+}
